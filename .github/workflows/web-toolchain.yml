@@ -1,0 +1,32 @@
+name: Web toolchain CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  typecheck-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Use Node.js 24.21.0 LTS
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24.21.0"
+          package-manager-cache: false
+      - name: Verify npm version
+        run: test "$(npm --version)" = "11.19.0"
+      - name: Install pinned Development compiler
+        run: npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+      - name: Type-check
+        run: npm run typecheck
+      - name: Build Development module
+        run: npm run build
+      - name: Verify build output
+        run: test -f dist/development.js
