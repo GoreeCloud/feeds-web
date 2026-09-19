@@ -6,7 +6,7 @@ GoreeCloud Feeds Web is the Glaze UI web-client project for GoreeCloud Feeds.
 
 **Lifecycle:** Development.
 
-The repository now contains a reproducible TypeScript Development toolchain and a typed Development-state module. It does **not** yet contain a rendered web application, UI framework, Glaze UI implementation, server connection, offline runtime, browser bundle intended for users, deployment, Release Candidate, production acceptance, or Stable release.
+The repository now contains a reproducible TypeScript Development toolchain, a typed Development-state module, and a dependency-free typed client for the non-sensitive `GET /api/v1/capabilities` Development contract. It does **not** yet contain a rendered web application, UI framework, Glaze UI implementation, authenticated product API client, offline runtime, browser bundle intended for users, deployment, Release Candidate, production acceptance, or Stable release.
 
 ## Development toolchain
 
@@ -14,7 +14,8 @@ The repository now contains a reproducible TypeScript Development toolchain and 
 - npm 11.19.0
 - TypeScript 7.0.2
 - strict TypeScript compiler configuration
-- GitHub Actions type-check/build validation
+- GitHub Actions type-check/build/protocol-client validation
+- strict typed `0.1.0-dev` capability-response parsing and Development capability fetch client
 - Development protocol target `0.1.0-dev`
 - Glaze UI target `1.6.0`
 
@@ -28,9 +29,10 @@ From the repository root with the pinned Node/npm toolchain:
 npm install --ignore-scripts --no-audit --no-fund --package-lock=false
 npm run typecheck
 npm run build
+npm run test:protocol
 ```
 
-This produces only the typed Development module. It is not a user-facing application build or production deployment artifact.
+This produces Development modules and validates the capability client. It is not a user-facing application build or production deployment artifact.
 
 ## Planned responsibilities
 
