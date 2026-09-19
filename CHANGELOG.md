@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### Development capability client
+
+- Added strict TypeScript types and runtime validation for the authoritative `0.1.0-dev` capability response.
+- Added a dependency-free Development fetch client for `GET /api/v1/capabilities`.
+- Added HTTP(S)-only base-URL validation, embedded-credential rejection, credential omission, redirect rejection, no-referrer/no-store behavior, JSON media-type enforcement, and fail-closed version/schema checks.
+- Added executable client validation to the existing exact-candidate CI workflow.
+- Kept rendered UI, authentication, protected product APIs, offline state, deployment, and Stable qualification explicitly incomplete.
+
+
 ### TypeScript Development toolchain
 
 - Selected Node.js 24.21.0 LTS, npm 11.19.0, and TypeScript 7.0.2 for the initial web Development toolchain.
