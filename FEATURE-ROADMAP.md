@@ -2,14 +2,14 @@
 
 ## Status
 
-Lifecycle: Planned  
-Implementation: Not started beyond repository/documentation foundation.
+Lifecycle: Development  
+Implementation: Phase 0 toolchain foundation in progress; no rendered application exists.
 
 The authoritative product capability scope is maintained in the governed GoreeCloud Feeds roadmap. This file scopes web-client implementation work.
 
 ## Phase 0 — Repository and governance foundation
 
-Establish truthful repository documentation, Platform Contract declaration, licensing identity, current Glaze UI target, and implementation-status boundaries. Select the web implementation stack through a documented technical decision before adding runtime dependencies.
+**Partial / verified:** repository documentation, Platform Contract declaration, licensing identity, Node.js 24.21.0 LTS/npm 11.19.0 Development runtime requirements, TypeScript 7.0.2, strict compiler configuration, typed Development-state module, Glaze UI V1.6.0 target, and CI validation are established. UI framework selection, first rendered Glaze UI shell, protocol client integration, authentication, offline architecture, browser matrix, and deployment remain incomplete.
 
 ## Phase 1 — Application shell and navigation
 
