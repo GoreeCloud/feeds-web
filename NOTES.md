@@ -3,11 +3,13 @@
 ## Verified repository state
 
 - Repository exists and uses main.
-- Before this foundation change, the repository contained only its initial README.
-- No web runtime or implementation stack has been verified.
-- No package/build configuration exists.
-- No deployment or release exists.
-- Live GoreeCloud GitHub identifies Glaze UI V1.6.0 as current Official Stable.
+- Governed repository/documentation foundation is established.
+- Development/CI runtime requirement is Node.js 24.21.0 LTS with npm 11.19.0.
+- TypeScript 7.0.2 is selected for web application logic.
+- Strict compiler configuration and a typed Development-state module exist.
+- Development protocol target is `0.1.0-dev`.
+- Current Official Stable Glaze UI target is V1.6.0.
+- No rendered web application, server connection, offline runtime, deployment, or release exists.
 
 ## Governing relationships
 
@@ -19,4 +21,4 @@
 
 ## Pending technical decisions
 
-Web framework/language; package manager; build/bundling; server/API client strategy; authentication/session handling; offline storage/service worker; browser support matrix; testing/CI; deployment packaging; and accessibility/performance acceptance tooling.
+UI framework; browser bundling/application packaging; concrete server/API client strategy; authentication/session handling; offline storage/service worker; browser support matrix; end-to-end testing; deployment packaging; and accessibility/performance acceptance tooling.
