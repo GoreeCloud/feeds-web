@@ -26,12 +26,12 @@ platform_systems:
     result: applicable-blocked
     version: null
     evidence: [PRIVACY POLICY.md, SPECIFICATIONS.md]
-    notes: No browser product runtime or accepted Privacy Shield integration exists.
+    notes: A privacy-minimized Development capability client exists and sends no user data or credentials; no rendered browser product runtime or accepted Privacy Shield integration exists.
   wardveil_security:
     result: applicable-blocked
     version: null
-    evidence: [SECURITY.md, SPECIFICATIONS.md]
-    notes: Toolchain hardening exists, but no rendered application or accepted Wardveil Security runtime integration exists.
+    evidence: [SECURITY.md, SPECIFICATIONS.md, src/protocol/capabilities.ts, scripts/test-protocol-client.mjs]
+    notes: Toolchain hardening and fail-closed Development capability-client validation exist, but no rendered application or accepted Wardveil Security runtime integration exists.
   everkeep:
     result: applicable-blocked
     version: null
@@ -108,15 +108,16 @@ compatibility:
     - goreecloud-feeds-web-development-toolchain
 
 evidence:
-  acceptance_tests: []
+  acceptance_tests:
+    - scripts/test-protocol-client.mjs
   release: []
 
 conformance:
   status: nonconformant
   validated_at: null
-  evidence: [README.md, SPECIFICATIONS.md, FEATURES.md, BRANDING.md, SECURITY.md, package.json, tsconfig.json, src/development.ts]
+  evidence: [README.md, SPECIFICATIONS.md, FEATURES.md, BRANDING.md, SECURITY.md, package.json, tsconfig.json, src/development.ts, src/protocol/capabilities.ts, scripts/test-protocol-client.mjs]
   blockers:
-    - Current implementation is a TypeScript Development toolchain only; no rendered web application, server connection, offline runtime, or deployment exists.
+    - Current implementation includes a TypeScript Development toolchain and non-sensitive capability client only; no rendered web application, authenticated product API integration, offline runtime, or deployment exists.
     - Glaze UI V1.6.0 application-specific implementation and acceptance are not established.
     - GoreeCloud Identity integration and acceptance are not established.
     - Wardveil Security integration and acceptance are not established.

@@ -8,9 +8,12 @@ Verified Development foundations:
 - TypeScript 7.0.2;
 - strict TypeScript compiler configuration;
 - typed Development-state module recording product, lifecycle, protocol target, Glaze UI target, and absence of a rendered application;
-- automated TypeScript type-check and build workflow.
+- automated TypeScript type-check and build workflow;
+- strict typed validation for the `0.1.0-dev` `GET /api/v1/capabilities` response;
+- dependency-free capability fetch client with HTTP(S)-only URL validation, credential omission, redirect rejection, no-referrer/no-store behavior, JSON content-type enforcement, and fail-closed protocol checks;
+- executable Development protocol-client validation.
 
-No user-facing web capability is currently implemented. There is no rendered interface, server connection, authentication flow, offline runtime, or deployable web application.
+No user-facing web capability is currently implemented. The repository can issue the non-sensitive Development capability request, but there is no rendered interface, authenticated product API integration, authentication flow, offline runtime, or deployable web application.
 
 ## Planned capability groups
 

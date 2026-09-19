@@ -9,7 +9,7 @@ The authoritative product capability scope is maintained in the governed GoreeCl
 
 ## Phase 0 — Repository and governance foundation
 
-**Partial / verified:** repository documentation, Platform Contract declaration, licensing identity, Node.js 24.21.0 LTS/npm 11.19.0 Development runtime requirements, TypeScript 7.0.2, strict compiler configuration, typed Development-state module, Glaze UI V1.6.0 target, and CI validation are established. UI framework selection, first rendered Glaze UI shell, protocol client integration, authentication, offline architecture, browser matrix, and deployment remain incomplete.
+**Partial / verified:** repository documentation, Platform Contract declaration, licensing identity, Node.js 24.21.0 LTS/npm 11.19.0 Development runtime requirements, TypeScript 7.0.2, strict compiler configuration, typed Development-state module, Glaze UI V1.6.0 target, and CI validation are established. A bounded typed client for the `0.1.0-dev` non-sensitive capability endpoint and executable client validation are also verified. UI framework selection, first rendered Glaze UI shell, authenticated product API integration, authentication, offline architecture, browser matrix, and deployment remain incomplete.
 
 ## Phase 1 — Application shell and navigation
 

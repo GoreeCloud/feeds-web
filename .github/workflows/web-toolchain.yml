@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  typecheck-and-build:
+  typecheck-build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -26,7 +26,11 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Type-check
         run: npm run typecheck
-      - name: Build Development module
+      - name: Build Development modules
         run: npm run build
       - name: Verify build output
-        run: test -f dist/development.js
+        run: |
+          test -f dist/development.js
+          test -f dist/protocol/capabilities.js
+      - name: Validate Development protocol client
+        run: npm run test:protocol

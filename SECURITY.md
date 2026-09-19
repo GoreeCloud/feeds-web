@@ -6,12 +6,16 @@ The repository is in Development at toolchain level. No rendered web application
 
 Current security-relevant properties:
 
-- no user-facing runtime or network client exists;
+- no user-facing runtime exists;
+- the only current network client targets the non-sensitive Development capability endpoint;
+- the Development capability client omits credentials, rejects embedded URL credentials, rejects redirects, sends no referrer, and accepts only HTTP(S);
+- capability responses fail closed on incompatible versions, unexpected fields, non-string capabilities, non-JSON responses, or non-success HTTP status;
 - no authentication/session/token storage is implemented;
 - no browser-local durable user data is implemented;
 - no third-party analytics or production telemetry is implemented;
 - the initial TypeScript compiler dependency is pinned exactly;
-- CI installs development tooling with package lifecycle scripts disabled; and
+- CI installs development tooling with package lifecycle scripts disabled;
+- executable protocol-client validation runs after the exact candidate build; and
 - Glaze UI, Identity, Wardveil Security, Privacy Shield, CSP/origin controls, and runtime security behavior remain acceptance-gated.
 
 ## Reporting security issues

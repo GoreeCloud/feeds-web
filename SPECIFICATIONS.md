@@ -6,9 +6,9 @@ Component: GoreeCloud Feeds Web
 Repository: GoreeCloud/feeds-web  
 Component class: Web application  
 Lifecycle: Development  
-Implementation status: TypeScript Development toolchain established; rendered application not yet implemented
+Implementation status: TypeScript Development toolchain and bounded capability-protocol client established; rendered application not yet implemented
 
-This specification scopes the web-client responsibilities derived from the governing GoreeCloud Feeds product roadmap. The current implementation is limited to a pinned TypeScript Development toolchain and typed Development-state module; no user-facing application is implemented.
+This specification scopes the web-client responsibilities derived from the governing GoreeCloud Feeds product roadmap. The current implementation is limited to a pinned TypeScript Development toolchain, typed Development-state module, and a bounded client for the non-sensitive `GET /api/v1/capabilities` Development contract; no user-facing application is implemented.
 
 ## Authority boundary
 
@@ -54,8 +54,8 @@ The client should minimize unnecessary external requests, avoid advertising/prof
 
 ## Current implementation decision
 
-The web language is TypeScript 7.0.2. Development/CI execution uses Node.js 24.21.0 LTS and npm 11.19.0. The repository currently uses the TypeScript compiler directly and intentionally has no UI framework, bundler, runtime client library, or rendered application. The current shared protocol target is `0.1.0-dev`, and Glaze UI V1.6.0 remains mandatory for the first rendered GoreeCloud interface.
+The web language is TypeScript 7.0.2. Development/CI execution uses Node.js 24.21.0 LTS and npm 11.19.0. The repository currently uses the TypeScript compiler directly and intentionally has no UI framework or browser bundler. `src/protocol/capabilities.ts` implements strict `0.1.0-dev` capability-response validation and a dependency-free fetch client for the authoritative protocol endpoint. The client omits credentials and rejects redirects because the current endpoint exposes only non-sensitive Development metadata. Glaze UI V1.6.0 remains mandatory for the first rendered GoreeCloud interface.
 
 ## Open decisions
 
-UI framework, browser bundling/application packaging, concrete API client implementation, authentication/session handling, offline-storage engine, service-worker design, browser support matrix, end-to-end test tooling, deployment host, and production packaging remain unresolved.
+UI framework, browser bundling/application packaging, authenticated product API client design, authentication/session handling, offline-storage engine, service-worker design, browser support matrix, end-to-end test tooling, deployment host, and production packaging remain unresolved.

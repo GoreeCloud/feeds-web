@@ -2,7 +2,11 @@
 
 ## Current implementation boundary
 
-This repository does not yet contain a working web application. The statements below define planned privacy requirements and are not claims about deployed behavior.
+This repository does not yet contain a working web application. It does contain a Development-only capability client that requests non-sensitive server lifecycle/capability metadata. The broader statements below define planned privacy requirements and are not claims about deployed product behavior.
+
+## Current Development client behavior
+
+The capability client sends no user content, omits credentials, sends no referrer, requests no-store behavior, rejects redirects, and processes only the `0.1.0-dev` capability response. It does not use cookies, sessions, browser-local durable state, telemetry, or third-party analytics.
 
 ## Planned privacy requirements
 
