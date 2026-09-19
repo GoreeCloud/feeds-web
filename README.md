@@ -1,12 +1,36 @@
 # GoreeCloud Feeds Web
 
-GoreeCloud Feeds Web is the planned Glaze UI web client for GoreeCloud Feeds.
+GoreeCloud Feeds Web is the Glaze UI web-client project for GoreeCloud Feeds.
 
 ## Current state
 
-**Lifecycle:** Planned / repository foundation.
+**Lifecycle:** Development.
 
-This repository currently establishes project documentation only. It does not yet contain a verified web application, UI framework, build system, package manifest, browser bundle, offline runtime, server connection, deployment, Release Candidate, production deployment, or Stable release.
+The repository now contains a reproducible TypeScript Development toolchain and a typed Development-state module. It does **not** yet contain a rendered web application, UI framework, Glaze UI implementation, server connection, offline runtime, browser bundle intended for users, deployment, Release Candidate, production acceptance, or Stable release.
+
+## Development toolchain
+
+- Node.js 24.21.0 LTS
+- npm 11.19.0
+- TypeScript 7.0.2
+- strict TypeScript compiler configuration
+- GitHub Actions type-check/build validation
+- Development protocol target `0.1.0-dev`
+- Glaze UI target `1.6.0`
+
+The first tranche deliberately selects no UI framework. A framework may be introduced only when it materially improves accessibility, maintainability, testing, performance, and Glaze UI integration without unnecessary lock-in.
+
+## Development validation
+
+From the repository root with the pinned Node/npm toolchain:
+
+```sh
+npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+npm run typecheck
+npm run build
+```
+
+This produces only the typed Development module. It is not a user-facing application build or production deployment artifact.
 
 ## Planned responsibilities
 
@@ -14,14 +38,14 @@ The web client is intended to provide the GoreeCloud Feeds home dashboard, Today
 
 ## Repository relationships
 
-- GoreeCloud/feeds — project-wide coordination and roadmap.
-- GoreeCloud/feeds-server — planned authoritative service.
-- GoreeCloud/feeds-protocol — planned shared client/server contracts.
-- GoreeCloud/feeds-shared — planned genuinely reusable internal code.
+- GoreeCloud/feeds — project-wide coordination and architecture decisions.
+- GoreeCloud/feeds-server — authoritative service implementation.
+- GoreeCloud/feeds-protocol — shared client/server contract authority.
+- GoreeCloud/feeds-shared — reusable implementation only when genuine cross-repository reuse exists.
 
 ## Glaze UI
 
-Live GoreeCloud GitHub state identifies **Glaze UI V1.6.0** as the current Official Stable consumer target. This repository records V1.6.0 as a future adoption requirement only; no Glaze UI implementation or conformance is yet verified.
+Live GoreeCloud GitHub state identifies **Glaze UI V1.6.0** as the current Official Stable consumer target. This repository records V1.6.0 as a required target, but no Glaze UI implementation or Feeds-specific conformance is yet verified.
 
 ## Documentation
 
@@ -29,7 +53,7 @@ See SPECIFICATIONS.md, FEATURES.md, FEATURE-ROADMAP.md, BENEFITS.md, COMPETITIVE
 
 ## Platform integration
 
-The repository declares GoreeCloud Platform Contract schema 0.4 in goreecloud.platform.yaml. All application-specific integrations remain blocked/planned until implementation and acceptance evidence exists.
+The repository declares GoreeCloud Platform Contract schema 0.4 in goreecloud.platform.yaml. Application-specific integrations remain blocked until implementation and acceptance evidence exists.
 
 ## License
 

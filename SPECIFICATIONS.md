@@ -5,10 +5,10 @@
 Component: GoreeCloud Feeds Web  
 Repository: GoreeCloud/feeds-web  
 Component class: Web application  
-Lifecycle: Planned  
-Implementation status: Repository documentation foundation only
+Lifecycle: Development  
+Implementation status: TypeScript Development toolchain established; rendered application not yet implemented
 
-This specification scopes the web-client responsibilities derived from the governing GoreeCloud Feeds product roadmap. It does not establish implementation.
+This specification scopes the web-client responsibilities derived from the governing GoreeCloud Feeds product roadmap. The current implementation is limited to a pinned TypeScript Development toolchain and typed Development-state module; no user-facing application is implemented.
 
 ## Authority boundary
 
@@ -52,6 +52,10 @@ Offline behavior should preserve local usability and user changes where supporte
 
 The client should minimize unnecessary external requests, avoid advertising/profiling dependencies, protect session and account state, and avoid leaking article/feed content through diagnostics.
 
+## Current implementation decision
+
+The web language is TypeScript 7.0.2. Development/CI execution uses Node.js 24.21.0 LTS and npm 11.19.0. The repository currently uses the TypeScript compiler directly and intentionally has no UI framework, bundler, runtime client library, or rendered application. The current shared protocol target is `0.1.0-dev`, and Glaze UI V1.6.0 remains mandatory for the first rendered GoreeCloud interface.
+
 ## Open decisions
 
-No web framework, programming language, package manager, bundler, offline-storage engine, service-worker design, test framework, browser support matrix, deployment host, authentication implementation, or API transport is selected by this foundation.
+UI framework, browser bundling/application packaging, concrete API client implementation, authentication/session handling, offline-storage engine, service-worker design, browser support matrix, end-to-end test tooling, deployment host, and production packaging remain unresolved.

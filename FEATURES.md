@@ -2,9 +2,15 @@
 
 ## Current implemented state
 
-No web-client product capability is currently verified as implemented in this repository.
+Verified Development foundations:
 
-The current repository content is a documentation and governance foundation.
+- pinned Node.js 24.21.0 LTS / npm 11.19.0 toolchain requirement;
+- TypeScript 7.0.2;
+- strict TypeScript compiler configuration;
+- typed Development-state module recording product, lifecycle, protocol target, Glaze UI target, and absence of a rendered application;
+- automated TypeScript type-check and build workflow.
+
+No user-facing web capability is currently implemented. There is no rendered interface, server connection, authentication flow, offline runtime, or deployable web application.
 
 ## Planned capability groups
 
